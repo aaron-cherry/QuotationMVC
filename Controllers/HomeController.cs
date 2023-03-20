@@ -5,12 +5,7 @@ using System.Diagnostics;
 namespace QuotationMVC.Controllers
 {
     public class HomeController : Controller
-    {
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-        
+    {        
         [HttpGet]
         public IActionResult Index()
         {
