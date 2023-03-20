@@ -1,0 +1,30 @@
+﻿@model Quotation
+@{
+    ViewData["Title"] = "Quotation";
+}
+
+<h1>Price Quotation</h1>
+<div>
+    <form asp-action="Quotation" method="post">
+        <p>
+            <label asp-for="SalesPrice">Sales Price:</label>
+            <input asp-for="SalesPrice"/>
+        </p>
+        <p>
+            <label asp-for="DiscountPercent">Discount percent:</label>
+            <input asp-for="DiscountPercent" />
+        </p>
+        <p>
+            <label>Discount Total:</label>
+            @Model.DiscountAmount.ToString("c")
+        </p>
+        <p>
+            <label>Total Price:</label>
+            @Model.Total.ToString("c")
+        </p>
+        <p>
+            <input type="submit" value="Calculate Discount" />
+        </p>
+        </form>
+</div>
+
